@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        *{
+            font-family: 'Quicksand', sans-serif;
+        }
+        body {
+            background:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Background.2e16d0ba.fill-1422x800.jpg');
+            padding: 0;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #message-container {
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        #message-container div {
+            background-color: #CCC;
+            padding: 5px;
+        }
+
+        #message-container div:nth-child(2n) {
+            background-color: #FFF;
+        }
+
+        #send-container {
+            position: fixed;
+            padding-bottom: 30px;
+            bottom: 0;
+            background-color: white;
+            max-width: 1200px;
+            width: 80%;
+            display: flex;
+        }
+
+        #message-input {
+            flex-grow: 1;
+            height:40px;
+            font-size: 27px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message-container"></div>
+    <form id="send-container">
+        <input type="text" id="message-input">
+        <button type="submit" id="send-button">Send</button>
+    </form>
+</body>
+
+</html>
